@@ -59,6 +59,3 @@ export const demo = async (token) => {
     });
     console.log("DELETE:", response);
 }
-
-
-
