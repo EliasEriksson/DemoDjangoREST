@@ -23,7 +23,7 @@ project and take that generated `settings.py` file and put it inside `djangoREST
 3. add this to `settings.py`:
    ```python
    INSTALLED_APPS = [
-       ...
+       ...,
        "REST.apps.RestConfig",
        "rest_framework",
        "rest_framework.authtoken",
@@ -31,7 +31,7 @@ project and take that generated `settings.py` file and put it inside `djangoREST
    ]
    
    MIDDLEWARE = [
-       ...
+       ...,
        'corsheaders.middleware.CorsMiddleware',
        'django.middleware.common.CommonMiddleware',
    ]
