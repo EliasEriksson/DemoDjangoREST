@@ -8,5 +8,9 @@ let formElement = document.getElementById("form");
 formElement.addEventListener("submit", async (event) => {
     event.preventDefault();
     token = await getToken(usernameFieldElement.value, passwordFieldElement.value);
-    await demo(token)
+    if (token) {
+        await demo(token);
+    } else {
+        console.log("Authentication failed.")
+    }
 });

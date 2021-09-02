@@ -1,4 +1,4 @@
-const baseURL = "http://djangorest.eliaseriksson.eu"
+const baseURL = "https://djangorest.eliaseriksson.eu"
 
 export const getToken = async (username, password) => {
     let response = await fetch(
@@ -9,8 +9,11 @@ export const getToken = async (username, password) => {
             body: JSON.stringify({"username": username, "password": password})
         }
     );
-    let data = await response.json();
-    return data["token"];
+    if (response.status === 200) {
+        let data = await response.json();
+        return data["token"];
+    }
+    return null;
 }
 
 export const requestEndpoint = async (endpoint, token, method, data) => {
