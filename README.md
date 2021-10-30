@@ -4,7 +4,7 @@ A demo project for a REST service using django, and django rest framework.
 ## Running the demo
 To run the demo open `demoClient/index.html` in a browser and filling in the credentials.
 
-The demo always runs against `https://djangodemo.eliaseriksson.eu/` \
+The demo always runs against `https://djangodemo.eliaseriksson.io/` \
 So running the demo does **NOT** require the steps bellow to run the service.
 
 ## Run the service
